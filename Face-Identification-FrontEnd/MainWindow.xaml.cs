@@ -22,22 +22,21 @@ namespace Face_Identification_FrontEnd
             // CvInvoke.PutText(mat, "Hello1, world", new System.Drawing.Point(image1.Width / 2, image1.Height / 2), Emgu.CV.CvEnum.FontFace.HersheyComplex, 3.0, new Bgr(255.0, 255.0, 255.0).MCvScalar);
             // CvInvoke.WaitKey(100);
             Back.Source = BitmapSourceConvert.ToBitmapSource(image1);
-
-            ShowVedio();
-
-
-
+            int width = image1.Width;
+            int height = image1.Height;
+            this.Width = width / 2;
+            this.Height = height / 2;
         }
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            ShowVedio();
         }
         private void ShowVedio()
         {
             VideoCapture capture = new VideoCapture("E:\\1\\1.mp4");
 
             Mat Frame = new Mat();
-
+            
             while (capture.Grab())
             {
                 capture.Read(Frame);
@@ -46,6 +45,12 @@ namespace Face_Identification_FrontEnd
                 Back.Source = BitmapSourceConvert.ToBitmapSource(Frame);
             }
             capture.Dispose();
+        }
+
+        private void AddNewUser(object sender, RoutedEventArgs e)
+        {
+            NewUserInfo newUserInfo = new NewUserInfo();
+            newUserInfo.ShowDialog();
         }
     }
 }

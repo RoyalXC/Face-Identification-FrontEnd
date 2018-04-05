@@ -1,0 +1,53 @@
+﻿<Window x:Class="Face_Identification_FrontEnd.NewUserInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Face_Identification_FrontEnd"
+        mc:Ignorable="d"
+        Title="NewUserInfo"
+        Height="750"
+        Width="400"
+        WindowStyle="SingleBorderWindow"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"
+        >
+    <Grid Margin="50,20,50,50" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Label Grid.Column="0" Grid.Row="0" Content="姓名：" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></Label>
+        <TextBox x:Name="UserName" Grid.Column="1" Grid.Row="0"  TextAlignment="Center" MaxLines="1" VerticalAlignment="Center" FontSize="18" />
+
+        <Label Grid.Column="0" Grid.Row="1" Content="性别：" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></Label>
+        <ComboBox x:Name="Us1erName" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" FontSize="18" >
+            <ComboBoxItem Content="男" IsSelected="True"></ComboBoxItem>
+            <ComboBoxItem Content="女"></ComboBoxItem>
+        </ComboBox>
+
+        <Label Grid.Column="0" Grid.Row="2" Content="姓名：" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></Label>
+        <TextBox x:Name="UserNa1me" Grid.Column="1" Grid.Row="2"  TextAlignment="Center" MaxLines="1" VerticalAlignment="Center" FontSize="18" />
+
+        <Label Grid.Column="0" Grid.Row="3" Content="姓名：" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></Label>
+        <TextBox x:Name="UserNam1e" Grid.Column="1" Grid.Row="3"  TextAlignment="Center" MaxLines="1" VerticalAlignment="Center" FontSize="18" />
+
+        <Label Grid.Column="0" Grid.Row="4" Content="姓名：" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></Label>
+        <TextBox x:Name="Use1rName" Grid.Column="1" Grid.Row="4"  TextAlignment="Center" MaxLines="1" VerticalAlignment="Center" FontSize="18" />
+
+        <Button Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Content="添加" Margin="20" FontSize="25" FontStretch="Expanded" FontWeight="Bold" TextOptions.TextFormattingMode="Display"/>
+    </Grid>
+
+</Window>

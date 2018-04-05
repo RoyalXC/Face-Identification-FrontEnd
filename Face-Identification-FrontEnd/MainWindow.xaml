@@ -4,19 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="800" Width="800"
         x:Name="Main">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Image x:Name="Back" Grid.Column="1" Grid.Row="1" Stretch="Fill">
+        <Image x:Name="Back" Grid.Column="1" Grid.Row="0" Stretch="Fill">
             <Image.ContextMenu>
                 <ContextMenu Name="BackContextMenu">
-                    <MenuItem Header="添加成员" Click="MenuItem_Click"></MenuItem>
+                    <MenuItem Header="测试" Click="MenuItem_Click"></MenuItem>
+                    <MenuItem Header="添加新用户" Click="AddNewUser"></MenuItem>
                 </ContextMenu>
             </Image.ContextMenu>
         </Image>
